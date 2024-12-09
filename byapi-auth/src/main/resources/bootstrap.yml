@@ -1,0 +1,23 @@
+server:
+  port: 0
+
+spring:
+  application:
+    name: byapi-auth
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      # 只需要配置一次地址即可
+      server-addr: 127.0.0.1:8848
+      # 服务发现
+      discovery:
+        group: DEFAULT_GROUP
+      # 服务配置
+      config:
+        group: DEFAULT_GROUP
+        file-extension: yml
+        # 通用配置
+        shared-configs:
+          - data-id: common-redisson.yml
+          - data-id: common-mysql.yml

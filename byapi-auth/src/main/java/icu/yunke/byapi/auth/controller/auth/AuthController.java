@@ -1,4 +1,4 @@
-package icu.yunke.byapi.auth.controller;
+package icu.yunke.byapi.auth.controller.auth;
 
 import cn.dev33.satoken.stp.SaTokenInfo;
 import cn.dev33.satoken.stp.StpUtil;

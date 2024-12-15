@@ -15,10 +15,10 @@ import org.springframework.web.bind.annotation.RestController;
  * @description 用户接口
  */
 @RestController
-@RequestMapping("/auth")
+@RequestMapping
 public class AuthController {
 
-    @PostMapping
+    @PostMapping("/login")
     public Result<String> login(String username, String password) {
         if (!("admin".equals(username) && "123456".equals(password))) {
            return Result.fail("登录失败");
@@ -30,8 +30,12 @@ public class AuthController {
         return Result.success(tokenInfo.tokenValue);
     }
 
-    @GetMapping("/isLogin")
-    public String isLogin() {
+    /**
+     * 获取邮箱验证码
+     * @return
+     */
+    @GetMapping("/captcha")
+    public String getCaptcha() {
         return "当前会话是否登录：" + StpUtil.isLogin();
     }
 }

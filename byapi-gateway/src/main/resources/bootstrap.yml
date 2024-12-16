@@ -23,8 +23,3 @@ spring:
         # 通用配置
         shared-configs:
           - data-id: common-redisson.yml
-        extension-configs:
-          # 页面组件的路由信息
-          #- data-id: biz-route.yml
-          # 基础路由信息
-          #- data-id: base-route.yml

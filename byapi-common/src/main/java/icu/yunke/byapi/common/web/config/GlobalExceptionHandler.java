@@ -1,7 +1,11 @@
-package icu.yunke.byapi.common.exception;
+package icu.yunke.byapi.common.web.config;
 
-import icu.yunke.byapi.common.web.Result;
+import cn.dev33.satoken.exception.SaTokenException;
+import icu.yunke.byapi.common.exception.BizException;
+import icu.yunke.byapi.common.web.base.Result;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -48,4 +52,15 @@ public class GlobalExceptionHandler {
         return Result.fail(e.getMessage());
     }
 
+    /**
+     * 捕获权限异常
+     */
+    @ResponseBody
+    @ExceptionHandler(SaTokenException.class)
+    public ResponseEntity<Result<String>> handleBaseException(SaTokenException e) {
+        e.printStackTrace();
+        Result<String> result = Result.fail(e.getMessage());
+        // 设置状态码为401
+        return new ResponseEntity<>(result, HttpStatus.UNAUTHORIZED);
+    }
 }

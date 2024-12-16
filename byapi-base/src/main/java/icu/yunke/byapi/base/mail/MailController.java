@@ -1,6 +1,6 @@
 package icu.yunke.byapi.base.mail;
 
-import icu.yunke.byapi.common.web.Result;
+import icu.yunke.byapi.common.web.base.Result;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

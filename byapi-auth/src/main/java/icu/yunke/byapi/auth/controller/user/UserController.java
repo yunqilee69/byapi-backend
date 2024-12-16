@@ -1,6 +1,6 @@
-package icu.yunke.byapi.auth.controller;
+package icu.yunke.byapi.auth.controller.user;
 
-import icu.yunke.byapi.common.web.Result;
+import icu.yunke.byapi.common.web.base.Result;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,5 +24,7 @@ public class UserController {
     public Result<String> getOne(Long id) {
         return Result.success(id.toString());
     }
+
+
 
 }

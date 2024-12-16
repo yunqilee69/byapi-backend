@@ -15,18 +15,10 @@
     <description>byapi-gateway</description>
 
     <dependencies>
-        <!-- model -->
         <dependency>
-            <groupId>icu.yunke</groupId>
-            <artifactId>byapi-common</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-web</artifactId>
-                </exclusion>
-            </exclusions>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
-
         <!-- spring gateway -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -41,7 +33,6 @@
             <groupId>com.github.xiaoymin</groupId> <!-- 接口文档 -->
             <artifactId>knife4j-gateway-spring-boot-starter</artifactId>
         </dependency>
-
         <!-- nacos 服务发现 -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
@@ -56,6 +47,20 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bootstrap</artifactId>
+        </dependency>
+        <!-- sa-token redis集成 -->
+        <dependency>
+            <groupId>cn.dev33</groupId>
+            <artifactId>sa-token-reactor-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.dev33</groupId>
+            <artifactId>sa-token-redis-jackson</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson-spring-boot-starter</artifactId>
         </dependency>
     </dependencies>
 

@@ -1,8 +1,8 @@
-package icu.yunke.byapi.auth.controller;
+package icu.yunke.byapi.auth.controller.auth;
 
 import cn.dev33.satoken.stp.SaTokenInfo;
 import cn.dev33.satoken.stp.StpUtil;
-import icu.yunke.byapi.common.web.Result;
+import icu.yunke.byapi.common.web.base.Result;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,10 +15,10 @@ import org.springframework.web.bind.annotation.RestController;
  * @description 用户接口
  */
 @RestController
-@RequestMapping("/auth")
+@RequestMapping
 public class AuthController {
 
-    @PostMapping
+    @PostMapping("/login")
     public Result<String> login(String username, String password) {
         if (!("admin".equals(username) && "123456".equals(password))) {
            return Result.fail("登录失败");
@@ -30,8 +30,12 @@ public class AuthController {
         return Result.success(tokenInfo.tokenValue);
     }
 
-    @GetMapping("/isLogin")
-    public String isLogin() {
+    /**
+     * 获取邮箱验证码
+     * @return
+     */
+    @GetMapping("/captcha")
+    public String getCaptcha() {
         return "当前会话是否登录：" + StpUtil.isLogin();
     }
 }

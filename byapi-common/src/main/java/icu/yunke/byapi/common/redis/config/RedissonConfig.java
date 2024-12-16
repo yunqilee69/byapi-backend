@@ -1,4 +1,4 @@
-package icu.yunke.byapi.common.config;
+package icu.yunke.byapi.common.redis.config;
 
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;
@@ -17,7 +17,7 @@ import javax.annotation.Resource;
  * @description: redisson配置类
  */
 @Configuration
-public class RedissonGlobalConfig {
+public class RedissonConfig {
 
     private static final String REDIS_PROTOCOL_PREFIX = "redis://";
 

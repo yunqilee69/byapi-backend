@@ -10,7 +10,6 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-// 排除一些类
 @ComponentScan("icu.yunke.byapi")
 public class GatewayApplication {
 

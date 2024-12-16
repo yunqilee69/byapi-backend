@@ -1,4 +1,4 @@
-package icu.yunke.byapi.common.web;
+package icu.yunke.byapi.common.web.base;
 
 import lombok.Data;
 

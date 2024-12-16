@@ -2,7 +2,7 @@ package icu.yunke.byapi.auth.controller.auth;
 
 import cn.dev33.satoken.stp.SaTokenInfo;
 import cn.dev33.satoken.stp.StpUtil;
-import icu.yunke.byapi.common.web.Result;
+import icu.yunke.byapi.common.web.base.Result;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

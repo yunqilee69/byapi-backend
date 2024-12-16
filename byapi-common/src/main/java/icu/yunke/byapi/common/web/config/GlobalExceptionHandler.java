@@ -1,6 +1,7 @@
-package icu.yunke.byapi.common.exception;
+package icu.yunke.byapi.common.web.config;
 
 import cn.dev33.satoken.exception.SaTokenException;
+import icu.yunke.byapi.common.exception.BizException;
 import icu.yunke.byapi.common.web.base.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
